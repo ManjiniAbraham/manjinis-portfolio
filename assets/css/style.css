@@ -1,0 +1,58 @@
+
+/* account for any border and padding for all elements*/
+*, :after, :before {
+    box-sizing: border-box;
+  }
+
+body{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+    Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    margin: 0px auto;
+    color: #445876;
+    background-color: #ededf6;
+}
+
+
+/* class 'main-header' is to set the background colour for the main header section*/
+.main-header {
+      background-color: #31343d;
+}
+
+/* Below class is for the display and styling of the main header container */
+  .main-header .container{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      width: 100%;
+      padding: 20px 40px;
+  }
+/* For the display and styling of header element in the main header container*/    
+  .main-header .container h1{
+    font-size: 50px;
+    font-weight: 600;
+    color: rgb(43, 226, 171);
+    
+  }
+/* Below classes are for the display and styling of the main nav in the header container*/  
+  .main-nav ul {
+    margin: 1em 0 .5em;
+    text-align: center;
+  }
+  .main-nav li {
+    display: inline;
+    font-size: 18px;
+    margin-right: .5rem;
+  }
+  
+  .main-nav li:last-child{
+    margin-right: 0;
+  }
+  
+  .main-nav li a {
+    color: #92cccd;
+    text-decoration: none;
+    padding: .2em;
+    border-bottom: 4px solid #92cccd;
+  }
+
