@@ -32,12 +32,24 @@ body{
     font-size: 50px;
     font-weight: 600;
     color: rgb(43, 226, 171);
-    
+    padding-left: 2rem;
   }
+
+.avatar {
+  display: inline;
+}
+.rounded-circle {
+  border-radius: 50%;
+}
+
 /* Below classes are for the display and styling of the main nav in the header container*/  
+.main-nav {
+  flex-grow: 1;
+}
+
 .main-nav ul {
     margin: 1em 0 .5em;
-    text-align: center;
+    text-align: right;
   }
 .main-nav li {
     display: inline;
@@ -167,6 +179,7 @@ body{
 .card .app-description h3 {
   padding-bottom: .5rem;
 }
+
 /* This is the display and styling for 'Contact Me' section*/
 .contact {
   display: flex;
@@ -188,6 +201,9 @@ body{
   font-weight: bold;
 }
 
+.contact li a:link, .contact li a:visited, .contact li a:active{
+  color: #445876;
+}
 
 /* Display for different screen resolutions*/
 @media screen and (min-width: 768px) {
