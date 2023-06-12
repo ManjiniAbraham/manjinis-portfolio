@@ -167,6 +167,27 @@ body{
 .card .app-description h3 {
   padding-bottom: .5rem;
 }
+/* This is the display and styling for 'Contact Me' section*/
+.contact {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  align-items: center;
+}
+
+.contact li {
+  flex: 1;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.contact li a {
+  border-bottom: 5px solid #445876;
+  padding-bottom: .5rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+
 
 /* Display for different screen resolutions*/
 @media screen and (min-width: 768px) {
