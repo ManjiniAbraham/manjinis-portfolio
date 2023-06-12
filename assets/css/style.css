@@ -19,7 +19,7 @@ body{
 }
 
 /* Below class is for the display and styling of the main header container */
-  .main-header .container{
+.main-header .container{
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -28,28 +28,28 @@ body{
       padding: 20px 40px;
   }
 /* For the display and styling of header element in the main header container*/    
-  .main-header .container h1{
+.main-header .container h1{
     font-size: 50px;
     font-weight: 600;
     color: rgb(43, 226, 171);
     
   }
 /* Below classes are for the display and styling of the main nav in the header container*/  
-  .main-nav ul {
+.main-nav ul {
     margin: 1em 0 .5em;
     text-align: center;
   }
-  .main-nav li {
+.main-nav li {
     display: inline;
     font-size: 18px;
     margin-right: .5rem;
   }
   
-  .main-nav li:last-child{
+.main-nav li:last-child{
     margin-right: 0;
   }
   
-  .main-nav li a {
+.main-nav li a {
     color: #92cccd;
     text-decoration: none;
     padding: .2em;
@@ -57,7 +57,8 @@ body{
   }
 
   /* Both classes below are for the display and styling of the section below the main header. */
-  .portfolio-tag{
+
+.portfolio-tag{
     box-sizing: border-box;
     width: 100%;
     height: 150px;
@@ -69,11 +70,122 @@ body{
     align-items: flex-end;
   }
   
-  .portfolio-tag p{  
+.portfolio-tag p{  
     font-size: 40px;
     font-weight: 600;
     color: #445876;
     padding: 10px;
     background-color: #92cccd;
   }
+ 
+  /* classes below are for display and styling of the main sections
+ 'About Me','Work' and 'Contact Me' */
+
+ .portfolio-container{
+    padding: 40px;
+    max-width: 100%;                                                                                                                                                                                                                                              
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2rem 0px 0px;
+    border: 5px;
+    width:100%;
+}
+
+.row:first-child {
+  padding-top: 0;
+}
+
+.left-content{
+    display: flex;
+    flex:0 0 100%;
+    width: 25%;
+    justify-content: flex-end;
+    padding-right: 20px;
+}
+
+.left-content h2 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: #445876;
+    text-align: right;
+}
+
+.right-content{
+    display: flex;
+    flex-wrap:wrap;
+    flex: 0 0 100%;
+    width: 75%;
+    padding-left: 30px;
+    border-left: 3px solid #445876;
+    padding-bottom: 15px;
+   
+}
+.card-container{
+    display: flex;
+    max-width: 100%;
+    width: 100%;
+    flex-flow: row wrap;
+}
+/* Below are the classes to display and style the different application cards under 'Work'*/
+.col {
+  margin-bottom: 1rem;
+  flex: 0 0 auto;
+  width: 100%;
+}
+
+.col:first-child {
+  max-width: 100%;
+  width: 100%;
+}
+
+.card{
+    display: flex;
+    position: relative;
+    background-color:antiquewhite;
+    flex-direction: column;
+    border: 8px solid #92cccd;
+    min-height: 150px;
+    box-sizing: border-box;
+}
+
+.col:first-child .card{
+    max-width: 100%;
+    min-height: 400px;
+}
+
+.card .app-description {
+    background-color: #92cccd;
+    padding: 15px;
+    flex: 1 0 auto;
+    position: absolute;
+    bottom: 20px;
+}
+
+.card .app-description h3 {
+  padding-bottom: .5rem;
+}
+
+/* Display for different screen resolutions*/
+@media screen and (min-width: 768px) {
+
+  .left-content{
+    flex:0 0 25%;
+  }
+
+  .right-content {
+    flex: 0 0 75%;
+  }
+
+  .col {
+    flex:0 0 auto;
+    width: 50%;
+  }
+  
+  .col:nth-child(even) {
+    padding-right: 1rem;
+  }
+}
 
