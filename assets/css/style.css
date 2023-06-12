@@ -56,3 +56,24 @@ body{
     border-bottom: 4px solid #92cccd;
   }
 
+  /* Both classes below are for the display and styling of the section below the main header. */
+  .portfolio-tag{
+    box-sizing: border-box;
+    width: 100%;
+    height: 150px;
+    padding: 20px 40px;
+    margin: 0 auto;
+    background-color: #c0c1c0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+  
+  .portfolio-tag p{  
+    font-size: 40px;
+    font-weight: 600;
+    color: #445876;
+    padding: 10px;
+    background-color: #92cccd;
+  }
+
