@@ -8,7 +8,7 @@ NA
 
 ## Usage
 
-![Screenshot of the live page](assets/images/Manjini-s-PortfolioPortfolio.png)
+![Screenshot of the live page](assets/images/Manjini-s-Portfolio.png)
 
 
 Application URL: https://manjiniabraham.github.io/manjinis-portfolio/
