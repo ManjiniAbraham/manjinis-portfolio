@@ -35,51 +35,55 @@ body{
 .main-header .container{
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
+      flex-direction: column;
       width: 100%;
       padding: 20px 40px;
-  }
+}
+
 /* For the display and styling of header element in the main header container*/    
 .main-header .container h1{
     font-size: 50px;
     font-weight: 600;
     color:var(--turquoisegreen);
-    padding-left: 2rem;
-  }
-/* display and styling for the profile image*/
-.avatar {
-  display: inline;
+    text-align: center;
 }
+/* display and styling for the profile image*/
+.main-header .avatar {
+  margin-bottom: 1.5rem;
+  width: 15%;
+  height: 15%;
+}
+
 .rounded-circle {
   border-radius: 50%;
 }
 
 /* Below classes are for the display and styling of the main nav in the header container*/  
-.main-nav {
-  flex-grow: 1;
-}
 
 .main-nav ul {
     margin: 1em 0 .5em;
-    text-align: right;
-  }
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+}
+
 .main-nav li {
-    display: inline;
     font-size: 18px;
-    margin-right: .5rem;
-  }
+    display: inline-flex;
+    margin-bottom: 1rem;
+}
   
 .main-nav li:last-child{
     margin-right: 0;
-  }
+}
   
 .main-nav li a {
     color: var(--shelduckblue);
     text-decoration: none;
-    padding: .2em;
+    padding: .4em;
     border-bottom: 4px solid var(--shelduckblue);
-  }
+}
 
   /* Both classes below are for the display and styling of the section below the main header. */
 
@@ -111,6 +115,7 @@ body{
     max-width: 100%;                                                                                                                                                                                                                                              
 }
 
+/* each row section defined */
 .row{
     display: flex;
     flex-wrap: wrap;
@@ -123,12 +128,13 @@ body{
   padding-top: 0;
 }
 
+/* each section has 2 content columns, left and right, CSS defined below */
 .left-content{
     display: flex;
     flex:0 0 100%;
     width: 25%;
-    justify-content: flex-end;
-    padding-right: 20px;
+    justify-content: center;
+    margin-bottom: 1rem;
 }
 
 .left-content h2 {
@@ -148,12 +154,14 @@ body{
     padding-bottom: 15px;
    
 }
+
 .card-container{
     display: flex;
     max-width: 100%;
     width: 100%;
     flex-flow: row wrap;
 }
+
 /* Below are the classes to display and style the different application cards under 'Work'*/
 .col {
   margin-bottom: 1rem;
@@ -167,13 +175,24 @@ body{
 }
 
 .card{
-    display: flex;
-    position: relative;
-    background-color:var(--antiquewhite);
-    flex-direction: column;
-    border: 8px solid var(--shelduckblue);
-    min-height: 150px;
-    box-sizing: border-box;
+  display: flex;
+  position: relative;
+  background-color:var(--antiquewhite);
+  flex-direction: column;
+  border: 8px solid var(--shelduckblue);
+  min-height: 150px;
+  box-sizing: border-box;
+  
+}
+
+/* hover effect of a imaage in the card - increase the brightness */
+.card img{
+  filter:brightness(70%);
+  transition: all 0.5s ease-in-out;
+}
+.card img:hover {
+
+   filter:brightness(100%);
 }
 
 .col:first-child .card{
@@ -199,12 +218,15 @@ body{
   justify-content: space-evenly;
   width: 100%;
   align-items: center;
+  flex-direction: column;
 }
 
 .contact li {
   flex: 1;
   font-size: 2rem;
   text-align: center;
+  display:inline-flex;
+  margin-bottom: 1rem;
 }
 
 .contact li a {
@@ -218,11 +240,71 @@ body{
   color: var(--cyanblue);
 }
 
-/* Display for different screen resolutions*/
+/* CSS for Medium devices (landscape tablets, 768px and up) */
 @media screen and (min-width: 768px) {
+
+  .main-header .container{
+    display: flex;
+    justify-content: center;
+  }
+
+  .main-nav ul {
+    flex-direction: row;
+    justify-content: center;
+  } 
+
+  .main-nav li {
+    display: inline;
+    margin-right: .5rem;
+  }
+  .contact {
+    flex-direction: row;
+  }
+
+  .contact li {
+    display: inline;
+    margin-bottom: 0;
+  }
+
+}
+
+/* CSS for Large devices (laptops/desktops, 992px and up) */
+@media screen and (min-width: 992px) {
+
+  .main-header .container{
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 20px 40px;
+  } 
+
+  .main-header .avatar {
+    margin-bottom: 0;
+    width: 8%;
+    height: 8%;
+  }
+
+  .main-header .container h1{
+    padding-left: 2rem;
+    text-align: left;
+  }
+  
+  .main-nav {
+    flex: 1;
+  }
+
+  .main-nav ul {
+    text-align: right;
+    justify-content: flex-end;
+  } 
+
 
   .left-content{
     flex:0 0 25%;
+    justify-content: right;
+    padding-right: 20px;
+    margin-bottom: 0;
   }
 
   .right-content {
