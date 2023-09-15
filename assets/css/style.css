@@ -316,8 +316,16 @@ body{
     width: 50%;
   }
   
-  .col:nth-child(even) {
-    padding-right: 1rem;
+  .right {
+    padding-right: 0.5rem;
   }
+
+  .full {
+    width: 100%;
+    max-width: 100%;
+  }
+
+
+
 }
 
